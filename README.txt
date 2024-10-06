@@ -1,4 +1,10 @@
-%% README file for Supplemental File 3 | Code for calculation of setpoints
+%% README file for "Code for calculation of setpoints"
+% The purpose of this code is to calculate the setpoint of an
+% input time series, by fitting a between 1-3 component Gaussian
+% mixture model (GMM). The setpoint for the time series is assumed to be 
+% the mean of the largest GMM component, for the number of fit components
+% with the lowest AIC score. 
+%
 % Code was written by Prof Brody H Foy. Contact: brodyfoy@uw.edu
 
 %% Code takes in two inputs:
@@ -17,7 +23,7 @@
 % typical patient data for platelet count
 %
 % The code is written in MATLAB, and should work on any version of MATLAB with the
-% 'Statistics and Machine Learning Toolbox' installed. To run the code, excude the
+% 'Statistics and Machine Learning Toolbox' installed. To run the code, execute the
 % following two commands: 
 Data = readtable('Toy data.xlsx'); 
 [setpoint, setpoint_cv] = CalculateSetpoint(Data.x, Data.y); 
@@ -33,4 +39,4 @@ setpoint_cv = 0.0612
 % only. The authors make no claims of accuracy or performance of any aspect of the code, and 
 % are not liable for any damages resulting from use of the code in any setting. 
 %
-% For any questions related to the code, please contact Dr Brody H Foy: brodyfoy@uw.edu  
+% For any questions related to the code, please contact Dr Foy: brodyfoy@uw.edu  
